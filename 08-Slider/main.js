@@ -13,8 +13,6 @@ sliderLeftButton.addEventListener('click', () => {
     changeSlide(number - 1)
 });
 
-
-
 function changeSlide(slideNumber) {
 
     if (slideNumber >= sliders.length) {
