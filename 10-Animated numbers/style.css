@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+
+}
+.fs-2{
+    font-size: 2rem;
+}
+.fs-3{
+    font-size: 3rem;
+}
+
+.counter-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 100px 50px;
+}
+
+.counter-container i {
+    font-size: 34px;
+}
+
+.counter {
+    font-size: 60px;
+    margin-top: 10px;
+}
+
+@media (max-width: 580px) {
+    body {
+        flex-direction: column;
+    }
+}

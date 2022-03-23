@@ -1,0 +1,143 @@
+:root {
+    --color-text: #1e272e;
+    --sidebar-bg: #ffff;
+    --bg-color: #d2dae2;
+    --hover-color: #4bcffa;
+    --color-hover-text: #ffff;
+}
+
+.dark-theme {
+    --color-text: #ffff;
+    --sidebar-bg: #485460;
+    --bg-color: #1e272e;
+    --hover-color: #1e272e;
+    --color-hover-text: #1e272e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
+
+.text {
+    font-size: 1.5rem;
+    color: var(--color-text);
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    border-radius: 15px;
+    background-color: var(--sidebar-bg);
+    padding: 10px;
+    transition: all 0.3s;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+
+.logo .bx {
+    position: absolute;
+    left: 225px;
+    font-size: 2.5rem;
+    bottom: 160px;
+    color: var(--color-text);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.link-area {
+    height: calc(100% - 180px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 80px;
+    overflow-x: auto;
+}
+
+.sidebar ul li {
+    cursor: pointer;
+    padding: 17px 25px;
+    border-radius: 12px;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.sidebar ul li:hover {
+    background-color: var(--hover-color);
+}
+
+.sidebar ul li:hover span {
+    color: var(--color-hover-text);
+}
+
+.sidebar ul li:hover a i {
+    color: var(--color-hover-text);
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    color: var(--color-text);
+}
+
+.sidebar ul li a .text {
+    transition: all 0.6s;
+}
+
+.sidebar ul li a i {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-right: 30px;
+    color: var(--color-text);
+}
+
+.sidebar.close {
+    width: 100px;
+}
+
+
+
+.sidebar.close .text {
+    display: none;
+
+}
+
+.sidebar.close .logo .bx {
+    left: 75px;
+    transform: rotate(180deg);
+}
+
+.content {
+    margin-left: 250px;
+    padding: 15px;
+    transition: all 0.3s;
+}
+
+.sidebar.close~.content {
+    margin-left: 100px;
+
+}
+
+.content h1 {
+    margin-top: 25px;
+}

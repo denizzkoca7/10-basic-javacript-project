@@ -1,0 +1,74 @@
+:root{
+    --color-text : rgb(0, 0, 0);
+    --color-header: rgba(66, 255, 41, 0.753);
+    --color-logo:rgba(0, 38, 255, 0.856);
+    --color-bg : rgb(253, 253, 253);
+}
+
+.dark-theme {
+    --color-text : rgb(255, 255, 255);
+    --color-header: rgba(164, 252, 153, 0.959);
+    --color-logo:rgba(255, 5, 5, 0.856);
+    --color-bg : rgb(0, 0, 0);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--color-bg);
+    transition: all 0.3s linear;
+}
+
+.container{
+    max-width: 1280px;
+    margin: 10px auto;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: var(--color-logo);
+}
+
+.btn{
+    padding: 15px 25px;
+    font-size: 16px;
+    background-color: var(--color-logo);
+    border: none;
+    border-radius: 10px;
+    color: var(--color-text);
+}
+
+.section{
+    margin-top: 30px 0;
+    text-align: center;
+    color: var(--color-text);
+    font-size: 20px;
+}
+
+.main{
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid var(--color-text);
+}
+
+.main > h1 {
+    margin-bottom: 25px;
+    color: var(--color-header);
+    text-transform: capitalize;
+    font-size: 40px
+}
+.main > p {
+    color: var(--color-text);
+}

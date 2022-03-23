@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            background-color: rgb(185, 215, 255);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        img {
+            transform-origin: center center;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            cursor: grabbing;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="container">
+        <img src="image2.webp" />
+    </div>
+    <script>
+        const container = document.querySelector(".container");
+        const img = document.querySelector("img");
+
+        container.addEventListener("mousemove", (e) => {
+            const x = e.clientX - e.target.offsetLeft;
+            const y = e.clientY - e.target.offsetTop;
+
+            img.style.transformOrigin = `${x}px ${y}px`;
+            img.style.transform = "scale(2)";
+        });
+
+        container.addEventListener("mouseleave", () => {
+            img.style.transformOrigin = "center center";
+            img.style.transform = "scale(1)";
+        });
+    </script>
+</body>
+
+</html>
